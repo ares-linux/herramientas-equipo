@@ -1,39 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enlaces de herramientas de equipo</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f4f9; }
-        .container { display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin: auto; }
-        a { text-decoration: none; color: white; background: #007bff; padding: 15px; border-radius: 8px; font-weight: bold; }
-        a:hover { background: #0056b3; }
+        :root{
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --accent: #2563eb;
+            --accent-2: #1e40af;
+            --muted: #6b7280;
+            --radius: 10px;
+            --max-width: 1100px;
+        }
+        *{box-sizing:border-box}
+        body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a}
+        header{padding:28px 16px; text-align:center}
+        .wrap{max-width:var(--max-width); margin:0 auto; padding:24px}
+        h1{margin:0; font-size:1.6rem}
+        p.lead{margin:8px 0 0; color:var(--muted)}
+
+        .grid{display:grid; gap:16px; margin-top:22px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));}
+        .section{background:transparent}
+        .section h2{font-size:1rem; margin:0 0 8px}
+
+        .card{display:block; background:var(--card); padding:14px; border-radius:var(--radius); text-decoration:none; color:inherit; box-shadow:0 6px 18px rgba(15,23,42,0.06); border:1px solid rgba(15,23,42,0.04); transition:transform .12s ease, box-shadow .12s ease}
+        .card:hover{transform:translateY(-6px); box-shadow:0 12px 30px rgba(15,23,42,0.08)}
+        .card .title{display:flex; align-items:center; gap:10px; font-weight:600}
+        .card .subtitle{font-size:0.9rem; color:var(--muted); margin-top:6px}
+
+        .group{margin-bottom:14px}
+
+        footer{margin-top:30px; padding:18px 0; text-align:center; color:var(--muted); font-size:0.9rem}
+
+        @media (max-width:520px){
+            .wrap{padding:16px}
+            h1{font-size:1.2rem}
+        }
     </style>
 </head>
 <body>
-    <h1>Panel de herramientas del equipo de softium</h1>
-    <div class="container">
-        <h2>Drive 📁</h2>
-        <a href="https://drive.google.com/drive/folders/1KcVhZoYWhpwFtFhZ0GaAHIWi1irTrfi9?usp=sharing" target="_blank">📁 Google Drive Equipo</a>
-        <h2>Drawio ✏️</h2>
-        <a href="https://app.diagrams.net/#G1DmTMbX9q5YIoGHLjjUoqOyeUmW1WYegS#%7B%22pageId%22%3A%22p0Nng-llTZR5P_ub6WVB%22%7D" target="_blank">UML</a>
-        <a href="https://app.diagrams.net/#G1TkRRpZEDidcrwZncmayUE5Xj6aX3U1lM#%7B%22pageId%22%3A%22GVGlkhBJuxCRhi2uFk0u%22%7D" target="_blank">Pantallas</a>
-        <a href="https://app.diagrams.net/#G1xPoVu9vqeyRg9ZgoVGe8KL0vy8R7NFpV#%7B%22pageId%22%3A%22DeQlmfizWPvocvz4jEQx%22%7D" target="_blank">Organigramas</a>
-        <a href="https://app.diagrams.net/#G1NpjQICwKMVAZz6Q6LDc72MDmyXlHt0DD#%7B%22pageId%22%3A%22uUWypnCtXBaaXrXMnmFC%22%7D" target="_blank">Diagramas entidad relacion</a>
-        <a href="https://app.diagrams.net/#G11YSGtWiCK_h-L5vmV60SWCbEtfJ7IBkK#%7B%22pageId%22%3A%227uRVRObnlqLkute1vBvI%22%7D" target="_blank">Maquina para asistencias</a>
-        <h2>Documento de google  📝</h2>
-        <a href="https://docs.google.com/document/d/12SmmYQNZkl061AGfaZCFyhDZNq0S0iST_AfJR-TUHPg/edit?tab=t.0" target="_blank">Documento del proyecto</a>
-        <a href="https://drive.google.com/file/d/1VizJIbc2b5sTztE50RMbWBMz0_Yp0Q35/view?usp=drive_link" target="_blank">Preguntas</a>
-        <a href="https://docs.google.com/document/d/1UE8XWINaljsWiJLWzT2kNrA1wLwXWhFx2Tfo87xsInY/edit?tab=t.0" target="_blank">Documento para construccion de base de datos</a>
-        <h2>Repositorios 🐈‍⬛</h2>
-        <a href="https://github.com/ares-linux/Sistema_EN" target="_blank">Sistema_EN</a>
-        <a href="https://github.com/ares-linux/herramientas-equipo" target="_blank">Pagina herramientas</a>
-    </div>
+    <header>
+        <div class="wrap">
+            <h1>Panel de herramientas — Equipo Softium</h1>
+            <p class="lead">Accesos rápidos a Drive, diagramas, documentos y repositorios del equipo.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <section class="group">
+                <h2>Drive</h2>
+                <div class="grid">
+                    <a class="card" href="https://drive.google.com/drive/folders/1KcVhZoYWhpwFtFhZ0GaAHIWi1irTrfi9?usp=sharing" target="_blank">
+                        <div class="title">📁 Google Drive Equipo</div>
+                        <div class="subtitle">Carpeta principal del proyecto y documentación compartida</div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="group">
+                <h2>Diagramas (draw.io)</h2>
+                <div class="grid">
+                    <a class="card" href="https://app.diagrams.net/#G1DmTMbX9q5YIoGHLjjUoqOyeUmW1WYegS#%7B%22pageId%22%3A%22p0Nng-llTZR5P_ub6WVB%22%7D" target="_blank">
+                        <div class="title">✏️ UML</div>
+                        <div class="subtitle">Modelos de clases y secuencia</div>
+                    </a>
+                    <a class="card" href="https://app.diagrams.net/#G1TkRRpZEDidcrwZncmayUE5Xj6aX3U1lM#%7B%22pageId%22%3A%22GVGlkhBJuxCRhi2uFk0u%22%7D" target="_blank">
+                        <div class="title">🖼️ Pantallas</div>
+                        <div class="subtitle">Mockups y flujos de UI</div>
+                    </a>
+                    <a class="card" href="https://app.diagrams.net/#G1xPoVu9vqeyRg9ZgoVGe8KL0vy8R7NFpV#%7B%22pageId%22%3A%22DeQlmfizWPvocvz4jEQx%22%7D" target="_blank">
+                        <div class="title">🌿 Organigramas</div>
+                        <div class="subtitle">Estructura del equipo y responsables</div>
+                    </a>
+                    <a class="card" href="https://app.diagrams.net/#G1NpjQICwKMVAZz6Q6LDc72MDmyXlHt0DD#%7B%22pageId%22%3A%22uUWypnCtXBaaXrXMnmFC%22%7D" target="_blank">
+                        <div class="title">🧾 ERD</div>
+                        <div class="subtitle">Modelo entidad-relación para la DB</div>
+                    </a>
+                    <a class="card" href="https://app.diagrams.net/#G11YSGtWiCK_h-L5vmV60SWCbEtfJ7IBkK#%7B%22pageId%22%3A%227uRVRObnlqLkute1vBvI%22%7D" target="_blank">
+                        <div class="title">⚙️ Máquina para asistencias</div>
+                        <div class="subtitle">Diagrama de la lógica de asistencias</div>
+                    </a>
+                    <a class="card" href="https://app.diagrams.net/?splash=0#G1IXfTI-oo6bZCbprmu8KNBpWMctKgrLYr#%7B%22pageId%22%3A%22ghb_ovWFz9_aVtyEGscI%22%7D" target="_blank">
+                        <div class="title">🔁 Diagramas de flujo</div>
+                        <div class="subtitle">Procesos y flujos de trabajo</div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="group">
+                <h2>Documentos</h2>
+                <div class="grid">
+                    <a class="card" href="https://docs.google.com/document/d/12SmmYQNZkl061AGfaZCFyhDZNq0S0iST_AfJR-TUHPg/edit?tab=t.0" target="_blank">
+                        <div class="title">📝 Documento del proyecto</div>
+                        <div class="subtitle">Especificaciones y alcance</div>
+                    </a>
+                    <a class="card" href="https://drive.google.com/file/d/1VizJIbc2b5sTztE50RMbWBMz0_Yp0Q35/view?usp=drive_link" target="_blank">
+                        <div class="title">❓ Preguntas</div>
+                        <div class="subtitle">Documento con dudas y respuestas</div>
+                    </a>
+                    <a class="card" href="https://docs.google.com/document/d/1UE8XWINaljsWiJLWzT2kNrA1wLwXWhFx2Tfo87xsInY/edit?tab=t.0" target="_blank">
+                        <div class="title">🗄️ Diseño de base de datos</div>
+                        <div class="subtitle">Guía para la construcción de la DB</div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="group">
+                <h2>Repositorios</h2>
+                <div class="grid">
+                    <a class="card" href="https://github.com/ares-linux/Sistema_EN" target="_blank">
+                        <div class="title">🐈‍⬛ Sistema_EN</div>
+                        <div class="subtitle">Repositorio principal del sistema</div>
+                    </a>
+                    <a class="card" href="https://github.com/ares-linux/herramientas-equipo" target="_blank">
+                        <div class="title">📚 Página herramientas</div>
+                        <div class="subtitle">Repositorio de esta página</div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
     <footer>
-  <div class="footer-content">
-    <p>&copy; 2026 Herramientas. Todos los derechos reservados a softium.</p>
-     <p>&copy; Pagina programada y mantenida por Ares.</p>
-</footer>
+        <div class="wrap">
+            <p>&copy; 2026 Herramientas. Todos los derechos reservados a Softium.</p>
+            <p>Página programada y mantenida por Ares.</p>
+        </div>
+    </footer>
 </body>
 </html>
